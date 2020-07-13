@@ -113,9 +113,9 @@ export default {
   methods: {
     compareStates,
     checkIfStateIsContained,
-    clickSwitch: function(evt) {
-      this.filter = !this.filter;
-    },
+    // clickSwitch: function(evt) {
+    //   this.filter = !this.filter;
+    // },
     checkWinner: function(newState, who) {
       if (checkIfPlayerWins(newState, who)) {
         const self = this;
