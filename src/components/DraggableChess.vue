@@ -18,7 +18,7 @@
       <div class="field-slot monkey" v-if="occupation === 1">
         <!-- player is occupying field -->
 
-        <img v-bind:id="index" src="../assets/monkey.svg" alt="human" width="100%" />
+        <img v-bind:id="index" src="../assets/human.svg" alt="human" width="100%" />
       </div>
       <div
         v-bind:class="{'outline': highlights[index]}"
@@ -26,7 +26,7 @@
         v-if="occupation === 2"
       >
         <!-- computer is occupying field -->
-        <img v-bind:id="index" src="../assets/croco.svg" alt="computer" width="100%" />
+        <img v-bind:id="index" src="../assets/computer.svg" alt="computer" width="100%" />
       </div>
     </div>
   </div>

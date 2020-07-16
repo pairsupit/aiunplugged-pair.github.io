@@ -4,7 +4,7 @@
 
     <div id="main-view">
       <div id="main-game">
-        <h4 class="left-text">Spielfeld</h4>
+        <h4 class="left-text"></h4>
         <DraggableChess
           :state="this.state"
           @new-state="handleNewState"
@@ -15,7 +15,7 @@
           <div>
             <div class="points-svg-container">
               <svg width="50" height="50" viewBox="0 0 50 50">
-                <image width="50" height="50" xlink:href="./assets/monkey.svg" />
+                <image width="50" height="50" xlink:href="./assets/human.svg" />
               </svg>
             </div>
             <div v-if="displayWin==1" style="float: right; color: green;">+1</div>
@@ -24,7 +24,7 @@
           <div>
             <div class="points-svg-container">
               <svg width="50" height="50" viewBox="0 0 50 50">
-                <image width="50" height="50" xlink:href="./assets/croco.svg" />
+                <image width="50" height="50" xlink:href="./assets/computer.svg" />
               </svg>
             </div>
             <div v-if="displayWin==2" style="float: right; color: red;">+1</div>
@@ -113,9 +113,9 @@ export default {
   methods: {
     compareStates,
     checkIfStateIsContained,
-    // clickSwitch: function(evt) {
-    //   this.filter = !this.filter;
-    // },
+    clickSwitch: function(evt) {
+      this.filter = !this.filter;
+    },
     checkWinner: function(newState, who) {
       if (checkIfPlayerWins(newState, who)) {
         const self = this;

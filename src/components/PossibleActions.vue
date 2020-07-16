@@ -67,9 +67,9 @@ export default {
     };
   },
   watch: {
-    // forceUpdate: function(newVal, oldVal) {
-    //   this.forceUpdateHelper = newVal;
-    // },
+    forceUpdate: function(newVal, oldVal) {
+      this.forceUpdateHelper = newVal;
+    },
     chosenPlayType: function(newVal, oldVal) {}
   }
 };

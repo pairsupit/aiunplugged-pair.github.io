@@ -77,7 +77,7 @@
           :height="dimension/3"
           :x="dimension/3 * (index % 3)"
           :y="dimension/3 * (Math.floor(index / 3))"
-          xlink:href="../assets/monkey.svg"
+          xlink:href="../assets/human.svg"
         />
 
         <image
@@ -86,7 +86,7 @@
           :height="dimension/3"
           :x="dimension/3 * (index % 3)"
           :y="dimension/3 * (Math.floor(index / 3))"
-          xlink:href="../assets/croco.svg"
+          xlink:href="../assets/computer.svg"
         />
       </g>
       <g v-for="(action, index) in actions" :key="index">

@@ -22,7 +22,7 @@ export default {
       steps: [
         {
           target: "#main-game>h4", // We're using document.querySelector() under the hood
-          content: `คุณเล่นเป็น <strong>ลิง</strong>! คุณจะเป็นฝ่ายชนะ ถ้า
+          content: `คุณเล่นเป็น <strong>หน้ายิ้ม</strong>! คุณจะเป็นฝ่ายชนะ ถ้า
           <ul style="text-align: left;">
           <li>ตัวหมากตัวใดตัวหนึ่งของคุณไปถึงอีกด้านของกระดาน</li>
           <li>คู่ต่อสู้ไม่สามารถเคลื่อนไหวได้อีกต่อไป</li>
