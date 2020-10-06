@@ -76,6 +76,8 @@ const resetToState = [1, 1, 1, 0, 0, 0, 2, 2, 2];
 import DraggableChess from "./components/DraggableChess.vue";
 import PossibleActions from "./components/PossibleActions.vue";
 import Tour from "./components/Tour.vue";
+import { uuid } from 'vue-uuid'
+
 import {
   performMove,
   checkIfPlayerWins,
@@ -201,12 +203,21 @@ export default {
     }
   },
   mounted: function() {
+    
     let uri = window.location.search.substring(1);
     let params = new URLSearchParams(uri);
     if (params.get("time")) {
       this.timeForPC = params.get("time");
     }
     this.updateSelection();
+    
+
+    if(localStorage.uuid == undefined){
+        localStorage.uuid = uuid.v1();
+    }
+    console.log("localStorage.uuid :"+localStorage.uuid);
+    // console.log( localStorage.name == undefined);
+    // console.log( localStorage.name === undefined);
   }
 };
 </script>

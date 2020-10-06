@@ -4,7 +4,8 @@ import DragAndDrop from 'vue-drag-and-drop'
 import VueTour from 'vue-tour'
 import Vue2TouchEvents from 'vue2-touch-events'
 import VueAnalytics from 'vue-analytics'
-
+import UUID from "vue-uuid";
+ 
 require('vue-tour/dist/vue-tour.css')
 
 Vue.use(VueAnalytics, {
@@ -14,7 +15,7 @@ Vue.config.productionTip = false
 Vue.use(DragAndDrop)
 Vue.use(VueTour)
 Vue.use(Vue2TouchEvents)
-
+Vue.use(UUID);
 
 new Vue({
   render: h => h(App)
