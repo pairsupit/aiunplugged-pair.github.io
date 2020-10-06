@@ -216,8 +216,7 @@ export default {
         localStorage.uuid = uuid.v1();
     }
     console.log("localStorage.uuid :"+localStorage.uuid);
-    // console.log( localStorage.name == undefined);
-    // console.log( localStorage.name === undefined);
+    alert("your uuid is "+localStorage.uuid);
   }
 };
 </script>
