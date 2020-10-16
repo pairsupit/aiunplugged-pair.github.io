@@ -79,7 +79,7 @@ export default {
       }
     },
     handleMoving: function(e) {
-      //console.log(e);
+      // console.log(e);
     },
     endHandler: function(e) {
       if (!this.playerIsAllowedToMove) {
@@ -132,6 +132,7 @@ export default {
       }
     },
     handleDrag: function(e) {
+
       if (!this.playerIsAllowedToMove) {
         return;
       }
@@ -169,6 +170,7 @@ export default {
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: 1fr;
   touch-action: none;
+  width: 80%;
 }
 
 .field > div {
