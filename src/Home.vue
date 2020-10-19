@@ -189,7 +189,7 @@ export default {
         /* This is timeStamp */
 
 
-        let res = axios.post('https://script.google.com/a/kkumail.com/macros/s/AKfycbyuiweQMXK0_EdZsBcak4gvrm8v1KNNnD9sWj6GiBd4CJObHnA/exec',
+        let res = axios.post('https://script.google.com/macros/s/AKfycbyuiweQMXK0_EdZsBcak4gvrm8v1KNNnD9sWj6GiBd4CJObHnA/exec',
                 { uuid: localStorage.uuid,
                   action: "insertPlayScore",
                   playRound: self.playRound,
@@ -197,9 +197,18 @@ export default {
                   times: localStorage.times ,           //ครั้งที่เล่นเกม
                   result: self.result,
                   timeStamp: DateTime
+                },{
+                  headers: {
+                          "Access-Control-Allow-Origin": "*",
+                          "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
+                          "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token"
+                  }
                 }).then(function(res){
                   console.log("Insert Play round succesfully!");
                   console.log(res.data);
+                  
+                }).catch(err => {
+                  console.log(err.response);
                 });
 
         self.TimeInstant = new Date();

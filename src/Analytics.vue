@@ -76,7 +76,7 @@ export default {
         getTestScore() {
             var score1 = 1;
             var score2 = 1;
-            if(localStorage.sumLawScore != undefined && localStorage.sumLearningScore != undefined){
+            if(localStorage.sumLawScore != 0 && localStorage.sumLearningScore != 0){
                 score1 = localStorage.sumLawScore;
                 score2 = localStorage.sumLearningScore;
             }

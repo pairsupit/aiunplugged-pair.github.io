@@ -237,7 +237,7 @@ export default {
                 localStorage.setItem('ArraySecondsOfTest', ArraySecondsOfTest);
                 /* เพิ่มการบันทึกเวลาใน localStorage */
                 
-                let res = axios.post('https://script.google.com/a/kkumail.com/macros/s/AKfycbyuiweQMXK0_EdZsBcak4gvrm8v1KNNnD9sWj6GiBd4CJObHnA/exec',
+                let res = axios.post('https://script.google.com/macros/s/AKfycbyuiweQMXK0_EdZsBcak4gvrm8v1KNNnD9sWj6GiBd4CJObHnA/exec',
                         {   uuid: localStorage.uuid,
                             action: "insertTestScore",
                             lawScore: this.score_1,
@@ -249,6 +249,12 @@ export default {
                             learningScore: this.score_2,
                             timeStop: timeRun,
                             timeStamp: DateTime
+                        },{
+                            headers: {
+                                "Access-Control-Allow-Origin": "*",
+                                "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
+                                "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token"
+                            }
                         }).then(function(res){
                             console.log("uuid :"+res.data.uuid);
                             console.log("action :"+res.data.action);
@@ -257,8 +263,9 @@ export default {
                             console.log("timeStop :"+res.data.timeStop);
                             console.log("answer array :"+answerArray);
                             console.log("timeStamp :"+DateTime);
-
-                })
+                        }).catch(err => {
+                            console.log(err.response);
+                        });
 
                 localStorage.timesTest++;
 

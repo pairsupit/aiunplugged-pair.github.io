@@ -1,16 +1,14 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import App from './App.vue';
 import router from './router';
-import DragAndDrop from 'vue-drag-and-drop'
-import VueTour from 'vue-tour'
-import Vue2TouchEvents from 'vue2-touch-events'
-import VueAnalytics from 'vue-analytics'
+import DragAndDrop from 'vue-drag-and-drop';
+import VueTour from 'vue-tour';
+import Vue2TouchEvents from 'vue2-touch-events';
+import VueAnalytics from 'vue-analytics';
 import UUID from "vue-uuid";
-import axios from 'axios';
 import "chart.js";
 import "hchs-vue-charts";
 
- 
 require('vue-tour/dist/vue-tour.css')
 
 Vue.use(VueAnalytics, {
