@@ -1,46 +1,50 @@
 <template>
     <div id="analytics">
-        <h1>การวิเคราะห์</h1>
+        <h1><b>การวิเคราะห์</b></h1>
 
         <div class="clearfix">
             
             <!-- Line Chart -->
             <div class="box">
-                <h4>วิเคราะห์การแพ้-ชนะ สำหรับการเล่นในครั้งต่อไปมีอัตรการแพ้สูงขึ้น</h4>
-                <h5 class="y-axis">Sweet Learning Computer <br>Wins/Loses</h5>
-                    <zingchart></zingchart>
-                <h5 class="x-axis">Game</h5>
+                <h3>วิเคราะห์การแพ้-ชนะ สำหรับการเล่นในครั้งต่อไปมีอัตรการแพ้สูงขึ้น</h3>
+                <h5 class="y-axis">ผลการแพ้-ชนะสะสมของ<br>Sweet Computer</h5>
+                    <div class="size-line-chart">
+                        <zingchart></zingchart>
+                    </div>
+                <h5 class="x-axis">รอบที่เล่น</h5>
 
                 <!-- describes -->
-                <div class="describe" style="text-align:left;">
+                <!-- <div class="describe" style="text-align:left;">
                     <b>หมายเหตุ:</b> ชนะ หมายถึง playerได้คะแนน +1
                     <br>แพ้ หมายถึง the sweet learning computer ได้คะแนน +1
-                </div>
+                </div> -->
+                
+                <div>เวลาในการเล่นเฉลี่ย: <span id="meanPlayTime">0</span> นาที</div>
+                <div>จำนวนครั้งในการเล่น: <span id="playRound">0</span> รอบ</div>
             </div>
             
             <!-- Score pie-chart -->
             <div class="box">
-                <h4>วิเคราะห์แบบสอบถามตัวชี้วัดหลังการใช้</h4>
-                    <canvas id="my-chart" style="padding-top: 100px; padding-bottom: 100px"></canvas>
-                <br>
-                <!-- describes -->
-                <div class="describe" style="text-align:left; padding-left: 100px">
-                    <div>คิดเป็นคะแนนส่วนกติกา: <span id="lawRate">0</span> %</div>
-                    <div>คิดเป็นคะแนนส่วนการเรียนรู้: <span id="learningRate">0</span> %</div>
-                    <div>เวลาในการทำแบบทดสอบเฉลี่ย: <span id="timeRate">0</span> นาที</div> 
-                    <div>จำนวนครั้งในการทำแบบทดสอบ: <span id="roundRate">0</span> ครั้ง</div>   
-                </div>
-            </div>
-
-            <!-- จำนวนครั้งในการเล่นเฉลี่ย และเวลา -->
-            <div class="box" style="width: 14%; padding-top: 220px;">
-                    <div style="text-align: left">
-                    <div>เวลาในการเล่นเฉลี่ย: <span id="meanPlayTime">0</span> นาที</div>
-                    <div>จำนวนครั้งในการเล่น: <span id="playRound">0</span> รอบ</div>
-                </div>
-                <!-- describes -->
-                <div class="describe" style="text-align:left;">
+                <h3>วิเคราะห์แบบสอบถามตัวชี้วัดหลังการใช้</h3>
                 
+                <div style="padding-top: 100px"> 
+                    <div class="clearfix">
+                        <div class="float">
+                            <canvas id="my-chart1"></canvas>
+                            <div style="margin-top: 20px">คิดเป็นคะแนนส่วนกติกา: <span id="lawRate">0</span> %</div>
+                        </div>
+
+                        <div class="float">
+                            <canvas id="my-chart2"></canvas>
+                            <div style="margin-top: 20px">คิดเป็นคะแนนส่วนการเรียนรู้: <span id="learningRate">0</span> %</div>
+                        </div>
+
+                    </div>
+                    <!-- describes -->
+                    <div class="describe" style="margin-top: 20px">
+                        <div>เวลาในการทำแบบทดสอบเฉลี่ย: <span id="timeRate">0</span> นาที</div> 
+                        <div>จำนวนครั้งในการทำแบบทดสอบ: <span id="roundRate">0</span> ครั้ง</div>   
+                    </div>
                 </div>
             </div>
         </div>
@@ -70,7 +74,9 @@ export default {
     mounted(){
         
         this.getTestScore();
-        this.getPlayTimeNRound();
+        if(localStorage.ArraySecondsOfPlay != null){
+            this.getPlayTimeNRound();
+        }
     },
     methods:{
         getTestScore() {
@@ -82,23 +88,41 @@ export default {
             }
             
                 
-            /* Draw a chart */
-            var ctx = document.getElementById('my-chart');
+            /* Draw a chart 1 */
+            var ctx = document.getElementById('my-chart1');
             var myChart = new Chart( ctx, {
                 type: 'pie',
                 data: {
-                    labels: ['คะแนนส่วนกติกา', 'คะแนนส่วนการเรียนรู้'],
+                    labels: ['คะแนนสะสมส่วนกติกาที่ถูกต้อง', 'คะแนนสะสมส่วนกติกาที่ผิด'],
                     datasets: [{
                     label: 'Page A',
-                    data: [ score1 , score2 ],
-                    backgroundColor: ['#3e95cd', '#8e5ea2']
+                    data: [ score1, (localStorage.timesTest*3)-score1 ],
+                    backgroundColor: ['#018abe', '#d6e8ee']
                    }]
                 },
                 options: {
                     responsive: true
                 }
             })
-            /* Draw a chart */
+            /* Draw a chart 1 */
+
+            /* Draw a chart 2 */
+            var ctx = document.getElementById('my-chart2');
+            var myChart = new Chart( ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['คะแนนสะสมส่วนการเรียนรู้ที่ถูกต้อง', 'คะแนนสะสมส่วนการเรียนรู้ที่ผิด'],
+                    datasets: [{
+                    label: 'Page A',
+                    data: [ score2 , (localStorage.timesTest*2)-score2 ],
+                    backgroundColor: ['#018abe', '#d6e8ee']
+                   }]
+                },
+                options: {
+                    responsive: true
+                }
+            })
+            /* Draw a chart 2 */
 
             // var Arrayseconds = localStorage.getItem('ArraySecondsOfTest');
             // var array = Arrayseconds.split(",");
@@ -152,7 +176,10 @@ export default {
 </script>
 
 <style scoped>
-
+h1, .clearfix {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 300;
+}
 .descript{
     text-align: left;
 }
@@ -175,11 +202,16 @@ export default {
 .box {
   float: left;
   margin: 0 auto;
-  width: 35%;
-  padding: 40px;
+  width: 45%;
+  padding: 20px;
   /* margin: 1%; */
 }
-
+.float {
+    float: left;
+    margin: 0 auto;
+    width: 50%;
+    padding: 0px;
+}
 .clearfix::after {
   content: "";
   clear: both;
@@ -188,5 +220,8 @@ export default {
 .grid {
   display: grid;
   row-gap: 2rem;
+}
+.size-line-chart{
+    width: 100%;
 }
 </style>

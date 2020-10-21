@@ -34,7 +34,7 @@ export default {
       }
     },
     mounted() {
-      if(localStorage.getItem('arrayResultOfPlay').length != 0){
+      if(localStorage.getItem('arrayResultOfPlay') != null){
         this.getInfo();
       }
     },
@@ -42,7 +42,7 @@ export default {
       getInfo(){
         var ArrayResult = localStorage.getItem('arrayResultOfPlay');
         var array = ArrayResult.split(",");
-        var ArrayTotalResult = [];
+        var ArrayTotalResult = [0];
 
         var scoreTotal = 0;
         for(var i=1 ; i<array.length ; i++ ){

@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <h1>The Sweet Learning Computer - aiunplugged</h1>
+    <h1><b>The Sweet Learning Computer - aiunplugged</b></h1>
 
       <div id="main-view">
         <div id="main-game">
@@ -35,10 +35,10 @@
         <!-- Da meistens 16:9 Monitore verwendet werden, sollte das vermutlich rechts vom Spielfeld angezeigt werden -->
         <div id="main-rules">
           <div class="row">
-            <h4 class="left-text">กฎของคอมพิวเตอร์</h4>
+            <h4 class="left-text"><b>กฎของคอมพิวเตอร์</b></h4>
             <!-- Rounded switch -->
             <div class="limit-options-btn">
-              <div>การเคลื่อนไหวที่เป็นไปได้เท่านั้น</div>
+              <div id="for-font"><b>การเคลื่อนไหวที่เป็นไปได้เท่านั้น</b></div>
               <label class="switch">
                 <input type="checkbox" v-on:click="clickSwitch" />
                 <span class="slider round"></span>
@@ -199,9 +199,7 @@ export default {
                   timeStamp: DateTime
                 },{
                   headers: {
-                          "Access-Control-Allow-Origin": "*",
-                          "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
-                          "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token"
+                    "Content-Type": "application/x-www-form-urlencoded"
                   }
                 }).then(function(res){
                   console.log("Insert Play round succesfully!");
@@ -324,21 +322,21 @@ export default {
       if(localStorage.winsPC == undefined){
         localStorage.winsPC = 0;
       }
-      /* สร้างตัวแปรที่เก็บถาวร ใน LocalStorage */
-
-      /* สร้างตัวแปรที่เก็บถาวร ใน LocalStorage */    
-        if(localStorage.timesTest == undefined){
-          localStorage.timesTest = 0;
-        }
-        if(localStorage.ArraySecondsOfTest == undefined){
-          localStorage.ArraySecondsOfTest = [];
-        }
-        if(localStorage.sumLawScore == undefined){
-          localStorage.sumLawScore = 0;
-        }
-        if(localStorage.sumLearningScore == undefined){
-          localStorage.sumLearningScore = 0;
-        }
+      if(localStorage.timesTest == undefined){
+        localStorage.timesTest = 0;
+      }
+      if(localStorage.ArraySecondsOfTest == undefined){
+        localStorage.ArraySecondsOfTest = [];
+      }
+      if(localStorage.ArraySecondsOfTest == undefined){
+        localStorage.ArraySecondsOfTest = [];
+      }
+      if(localStorage.sumLawScore == undefined){
+        localStorage.sumLawScore = 0;
+      }
+      if(localStorage.sumLearningScore == undefined){
+        localStorage.sumLearningScore = 0;
+      }
         /* สร้างตัวแปรที่เก็บถาวร ใน LocalStorage */
     }
   },
@@ -363,6 +361,13 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+#for-font, h4, h1 {
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-weight: 300;
+}
+
+
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

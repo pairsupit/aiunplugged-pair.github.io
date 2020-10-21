@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import test from '../test.vue'
 import home from '../Home.vue'
 import analytics from '../Analytics.vue'
+import inquirement from '../inquirement.vue'
 
 Vue.use(VueRouter)
 
@@ -21,6 +22,11 @@ const routes = [
         path: '/analytics',
         name:'analytics',
         component: analytics
+    },
+    {
+        path: '/inquirement',
+        name:'inquirement',
+        component: inquirement
     }
 ]
 

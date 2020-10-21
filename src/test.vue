@@ -1,11 +1,12 @@
 <template>
 
   <div id="test">
-    <h1>ตัวชี้วัดหลังการเล่น</h1>
+    <h1><b>ตัวชี้วัดหลังการเล่น</b></h1>
 
     <!-- <form> -->
     <form @submit="submitTest">
-        <ol>
+        <div class="form">
+            <ol>
             <li>เมื่อเริ่มเกมส์แล้ว ข้อใดต่อไปนี้ถูกต้อง
 
                 <label for="1.1">
@@ -109,7 +110,7 @@
 
             </li>
         </ol>
-
+        </div>
     <button id="btnSubmit" type="submit">submit</button>
 
     </form>
@@ -251,9 +252,7 @@ export default {
                             timeStamp: DateTime
                         },{
                             headers: {
-                                "Access-Control-Allow-Origin": "*",
-                                "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
-                                "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token"
+                                "Content-Type": "application/x-www-form-urlencoded"
                             }
                         }).then(function(res){
                             console.log("uuid :"+res.data.uuid);
@@ -271,6 +270,8 @@ export default {
 
                 this.clearPage();
 
+                alert("แบบทดสอบของคุณถูกบันทึกแล้ว");
+
                     
             }else{
                alert("กรุณาเลือกให้ครบทุกข้อ");
@@ -281,6 +282,12 @@ export default {
 </script>
 
 <style scoped>
+    
+    h1, ol, li {
+        font-family: 'Bai Jamjuree', sans-serif;
+        font-weight: 300;
+    }
+
     #btnSubmit {
         color: white;
         background-color: orange;
@@ -306,7 +313,11 @@ export default {
     label {
         margin: 8px;
     }
-    #test_3 {
-        width: 50%;
+    #test_2 {
+        width: 30%;
+        padding: 20px;
+    }
+    .form {
+        padding-left: 25%;
     }
 </style>
