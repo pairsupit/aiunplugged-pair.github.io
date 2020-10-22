@@ -200,15 +200,17 @@ h1, .clearfix {
     margin: 0px;
 }
 .box {
-  float: left;
-  margin: 0 auto;
-  width: 45%;
-  padding: 20px;
+    border: 1px solid lightgray ;
+    float: left;
+    margin: 20px;
+    width: 45%;
+    padding: 15px;
+    
   /* margin: 1%; */
 }
 .float {
     float: left;
-    margin: 0 auto;
+    margin: auto;
     width: 50%;
     padding: 0px;
 }
