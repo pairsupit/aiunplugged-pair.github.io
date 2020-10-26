@@ -7,6 +7,7 @@
     <form @submit="submitTest">
         <div class="form">
             <ol>
+            <h2>วัดผลส่วนกติกา</h2>
             <li>เมื่อเริ่มเกมส์แล้ว ข้อใดต่อไปนี้ถูกต้อง
 
                 <label for="1.1">
@@ -70,43 +71,174 @@
             </li>
 
             <li>ข้อใดต่อไปนี้<u>ผิด</u>
+                <br>
+                <img src="../src/assets/test_4.png" id="test_4">
 
                 <label for="4.1">
-                    <input type="radio" name="4_ans" id="4.1" value="false">
-                        <span id="4.1_ans">ในครั้งแรก The sweet computer มีการเดินแบบสุ่ม</span></label>
+                    <input type="radio" name="4_ans" id="4.1" value="true">
+                        <span id="4.1_ans">กระดานการเรียนรู้ แสดงทิศทางการเดินของผู้เล่น</span></label>
                 
                 <label for="4.2">
                     <input type="radio" name="4_ans" id="4.2" value="false">
-                        <span id="4.2_ans">ในครั้งแรกมีจำนวนลูกอมเท่ากับการจำนวนการเคลื่อนที่ของ the sweet computer ที่เป็นไปได้</span></label>
+                        <span id="4.2_ans">กฎของคอมพิวเตอร์ แสดงการเคลื่อนที่ที่เป็นได้ทั้งหมดของ the sweet computer 
+                            เมื่อหน้าตาของกระดานคล้ายกลับกระดานใดกระดานหนึ่งดังภาพ</span></label>
 
                 <label for="4.3">
                     <input type="radio" name="4_ans" id="4.3" value="false">
-                        <span id="4.3_ans">การแพ้ทำให้ the sweet computer เรียนรู้โดยการเลิกการเคลื่อนที่ตำแหน่งเดิมที่ทำให้แพ้</span></label>
+                        <span id="4.3_ans">ในแต่ละจุดแสดงการสุ่มการเคลื่อนที่ของ the sweet computer</span></label>
 
                 <label for="4.4">
-                    <input type="radio" name="4_ans" id="4.4" value="true">
-                        <span id="4.4_ans">การเรียนรู้ของ the sweet learning computer เกิดจากการให้ลูกอมเป็นรางวัลเมื่อชนะ</span></label>
+                    <input type="radio" name="4_ans" id="4.4" value="false">
+                        <span id="4.4_ans">สีของลูกศรแต่ละภาพแสดงการเคลื่อนที่ที่เป็นไปได้ของ the sweet computer</span></label>
 
             </li>
             
-            <li>เหตุผลในข้อใด ไม่นำไปสูการเรียนรู้ของ the sweet computer
-
+            <li>ทุกข้อต่อไปนี้อธิบายถึงรูปข้างใต้ <u>ยกเว้น</u>ข้อใด
+                <br>
+                <img src="../src/assets/test_5,9.png" id="test_5">
 
                 <label for="5.1">
                     <input type="radio" name="5_ans" id="5.1" value="false">
-                        <span id="5.1_ans">การแพ้ของ the sweet computer</span></label>
+                        <span id="5.1_ans">ผู้เล่นมีการเดินเพียง 1 ครั้ง</span></label>
                 
                 <label for="5.2">
                     <input type="radio" name="5_ans" id="5.2" value="false">
-                        <span id="5.2_ans">การสุ่มการเดินแต่ละรอบไปเรื่อยๆ ของ the sweet computer</span></label>
+                        <span id="5.2_ans">การเคลื่อนที่ต่อไปที่เป็นไปได้ของคอมพิวเตอร์ มีสี่แบบ</span></label>
 
                 <label for="5.3">
                     <input type="radio" name="5_ans" id="5.3" value="false">
-                        <span id="5.3_ans">การยกเลิกการเดินเมื่อแพ้</span></label>
+                        <span id="5.3_ans">จุดสี่ลูกแสดงถึงทิศการเดินของคอมพิวเตอร์</span></label>
 
                 <label for="5.4">
                     <input type="radio" name="5_ans" id="5.4" value="true">
-                        <span id="5.4_ans">การให้รางวัลเมื่อ the sweet computer ชนะ</span></label>
+                        <span id="5.4_ans">จุดสี่ลูกแสดงถึงทิศการเดินของผู้เล่น</span></label>
+
+            </li>
+
+            <h2>วัดผลการเรียนรู้</h2>
+            <li>เหตุผลในข้อใด ไม่นำไปสู่การเรียนรู้ของ the sweet computer
+
+                <label for="6.1">
+                    <input type="radio" name="6_ans" id="6.1" value="false">
+                        <span id="6.1_ans">การแพ้ของ the sweet computer</span></label>
+                
+                <label for="6.2">
+                    <input type="radio" name="6_ans" id="6.2" value="false">
+                        <span id="6.2_ans">การสุ่มการเดินแต่ละรอบไปเรื่อยๆ ของ the sweet computer</span></label>
+
+                <label for="6.3">
+                    <input type="radio" name="6_ans" id="6.3" value="false">
+                        <span id="6.3_ans">การไม่เดินไปทิศทางเดิมเมื่อมีผลแพ้</span></label>
+
+                <label for="6.4">
+                    <input type="radio" name="6_ans" id="6.4" value="true">
+                        <span id="6.4_ans">การให้รางวัลเมื่อ the sweet computer ชนะ</span></label>
+
+            </li>
+
+            <li>ข้อใดต่อไปนี้<u>ผิด</u>
+
+                <label for="7.1">
+                    <input type="radio" name="7_ans" id="7.1" value="false">
+                        <span id="7.1_ans">ในครั้งแรก The sweet computer มีการเดินแบบสุ่ม</span></label>
+                
+                <label for="7.2">
+                    <input type="radio" name="7_ans" id="7.2" value="false">
+                        <span id="7.2_ans">ในครั้งแรกที่เริ่มเล่นมีจำนวนจุดที่ทำการสุ่มเท่ากับการจำนวนการเคลื่อนที่ของ the sweet computer ที่เป็นไปได้</span></label>
+
+                <label for="7.3">
+                    <input type="radio" name="7_ans" id="7.3" value="false">
+                        <span id="7.3_ans">การแพ้ทำให้ the sweet computer เรียนรู้โดยการเลิกการเคลื่อนที่ตำแหน่งเดิมที่ทำให้แพ้</span></label>
+
+                <label for="7.4">
+                    <input type="radio" name="7_ans" id="7.4" value="true">
+                        <span id="7.4_ans">การเรียนรู้ของ the sweet learning computer เกิดจากการให้ลูกอมเป็นรางวัลเมื่อชนะ</span></label>
+
+            </li>
+
+            <li>คุณคิดว่า ถ้าหากคุณมีการเล่นในแบบเดิมซ้ำๆ คอมพิวเตอร์จะมีโอกาสชนะมากขึ้นหรือไม่ เพราะเหตุใด
+
+                <label for="8.1">
+                    <input type="radio" name="8_ans" id="8.1" value="true">
+                        <span id="8.1_ans">คอมพิวเตอร์มีโอกาสชนะมากขึ้น เพราะ คอมพิวเตอร์ลบการเคลื่อนที่ที่ทำให้แพ้เรื่อยๆ</span></label>
+                
+                <label for="8.2">
+                    <input type="radio" name="8_ans" id="8.2" value="false">
+                        <span id="8.2_ans">คอมพิวเตอร์มีโอกาสชนะมากขึ้น เพราะ คอมพิวเตอร์จดจำการเคลื่อนที่ๆทำให้ชนะและเดินแบบเดิมซ้ำๆ</span></label>
+
+                <label for="8.3">
+                    <input type="radio" name="8_ans" id="8.3" value="false">
+                        <span id="8.3_ans">คอมพิวเตอร์มีโอกาสชนะมากขึ้น เพราะ คอมพิวเตอร์จะให้รางวัลเมื่อมีการเคลื่อนที่ชนะ</span></label>
+
+                <label for="8.4">
+                    <input type="radio" name="8_ans" id="8.4" value="false">
+                        <span id="8.4_ans">คอมพิวเตอร์ไม่มีโอกาสชนะมากขึ้น เพราะ คอมพิวเตอร์จะสุ่มการเคลื่อนที่ใหม่ทุกๆครั้ง </span></label>
+
+            </li>
+
+            <li>ข้อใดต่อไปนี้กล่าว<b>ผิด</b> เกี่ยวกับจุดในภาพข้างใต้ เมื่อแต่ละสีของจุดหมายถึงสีลูกศรการเคลื่อนที่ที่เป็นไปได้ของ the sweet computer
+                <br>
+                <img src="../src/assets/test_5,9.png" id="test_9">
+
+                <label for="9.1">
+                    <input type="radio" name="9_ans" id="9.1" value="false">
+                        <span id="9.1_ans">เมื่อผู้เล่นมีการเคลื่อนที่ จะมีการสุ่มจุดในด้านขวามือของภาพ</span></label>
+                
+                <label for="9.2">
+                    <input type="radio" name="9_ans" id="9.2" value="false">
+                        <span id="9.2_ans">ถ้า the sweet computer มีการเคลื่อนที่สุดท้ายที่ทำให้แพ้ จะตัดจุดนั้นออกไป</span></label>
+
+                <label for="9.3">
+                    <input type="radio" name="9_ans" id="9.3" value="false">
+                        <span id="9.3_ans">จากรูปถ้าหากการเดินตามลูกศรสีเหลือง แล้วการเดินในครั้งต่อไปทุกกรณีทำให้ the sweet computer แพ้ จุดสีเหลืองจะถูกตัดออก</span></label>
+
+                <label for="9.4">
+                    <input type="radio" name="9_ans" id="9.4" value="true">
+                        <span id="9.4_ans">เมื่อ the sweet computer มีการเคลื่อนแล้วทำให้ชนะจะมีการเดินทางเดิมซ้ำๆ</span></label>
+
+            </li>
+
+            <li>ทุกข้อในตารางต่อไปนี้ เป็นกระดานการเคลื่อนที่ในครั้งต่อไปของคอมพิวเตอร์ ดังรูปข้างใต้ <b>ยกเว้น</b>ข้อใด
+                <br>
+                <img src="../src/assets/test_10.png" id="test_10">
+                <table>
+                    <tr>
+                        <td>ข้อ</td>
+                        <td>การเคลื่อนที่ในครั้งต่อไปของคอมพิวเตอร์</td>
+                    </tr>
+                    <tr>
+                        <td>A</td>
+                        <td><img src="../src/assets/10.1.png" class="test_10"></td>
+                    </tr>
+                    <tr>
+                        <td>B</td>
+                        <td><img src="../src/assets/10.2.png" class="test_10"></td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td><img src="../src/assets/10.3.png" class="test_10"></td>
+                    </tr>
+                    <tr>
+                        <td>D</td>
+                        <td><img src="../src/assets/10.4.png" class="test_10"></td>
+                    </tr>
+                </table>
+
+                <label for="10.1">
+                    <input type="radio" name="10_ans" id="10.1" value="false">
+                        <span id="10.1_ans">A และ B</span></label>
+                
+                <label for="10.2">
+                    <input type="radio" name="10_ans" id="10.2" value="false">
+                        <span id="10.2_ans">A และ C</span></label>
+
+                <label for="10.3">
+                    <input type="radio" name="10_ans" id="10.3" value="false">
+                        <span id="10.3_ans">B และ C </span></label>
+
+                <label for="10.4">
+                    <input type="radio" name="10_ans" id="10.4" value="true">
+                        <span id="10.4_ans">A, B และ C</span></label>
 
             </li>
         </ol>
@@ -163,7 +295,7 @@ export default {
     },
     methods: {
         clearPage: function(){
-            for( var i = 1 ; i <= 5 ; i++ ){
+            for( var i = 1 ; i <= 10 ; i++ ){
                 for( var j = 1 ; j <= 4 ; j++ ){  
                     document.getElementById(i +"."+ j).checked = false;
                 }
@@ -183,7 +315,7 @@ export default {
                 };
             };
 
-            if( countToCheck == 5){
+            if( countToCheck == 10){
                 if(document.getElementById("1.4").checked == true ){
                     this.score++; this.score_1++;
                     localStorage.sumLawScore++;
@@ -197,20 +329,41 @@ export default {
                     localStorage.sumLawScore++;
                 };
                 if(document.getElementById("4.4").checked == true){
+                    this.score++; this.score_1++;
+                    localStorage.sumLawScore++;
+                };
+                if(document.getElementById("5.4").checked == true){
+                    this.score++; this.score_1++;
+                    localStorage.sumLawScore++;
+                };
+                if(document.getElementById("6.4").checked == true){
                     this.score++; this.score_2++;
                     localStorage.sumLearningScore++;
                 };
-                if(document.getElementById("5.4").checked == true){
+                if(document.getElementById("7.4").checked == true){
+                    this.score++; this.score_2++;
+                    localStorage.sumLearningScore++;
+                };
+                if(document.getElementById("8.1").checked == true){
+                    this.score++; this.score_2++;
+                    localStorage.sumLearningScore++;
+                };
+                if(document.getElementById("9.4").checked == true){
+                    this.score++; this.score_2++;
+                    localStorage.sumLearningScore++;
+                };
+                if(document.getElementById("10.4").checked == true){
                     this.score++; this.score_2++;
                     localStorage.sumLearningScore++;
                 };
                
-                alert("คะแนนรวมทั้งหมด : " + this.score +",คะแนนส่วนกติกาการเล่น :" + 
-                this.score_1 +",คะแนนส่วนกติกาการเล่น :"+ this.score_2);
+                alert("คะแนนรวมทั้งหมด : " + this.score
+                        +",\nคะแนนส่วนกติกาการเล่น :" + this.score_1 
+                        +",\nคะแนนส่วนกติกาการเล่น :"+ this.score_2);
 
                 
                 var answerArray = [];
-                for( var i = 1 ; i <= 5 ; i++ ){
+                for( var i = 1 ; i <= 10 ; i++ ){
                     for( var j = 1 ; j <= 4 ; j++ ){  
                         if(document.getElementById(i +"."+ j).checked === true){    //Checked radio button
                             var x = document.getElementById(i +"."+ j+"_ans").innerText;
@@ -247,6 +400,11 @@ export default {
                             answer3: answerArray[2],
                             answer4: answerArray[3],
                             answer5: answerArray[4],
+                            answer6: answerArray[5],
+                            answer7: answerArray[6],
+                            answer8: answerArray[7],
+                            answer9: answerArray[8],
+                            answer10: answerArray[9],
                             learningScore: this.score_2,
                             timeStop: timeRun,
                             timeStamp: DateTime
@@ -255,13 +413,13 @@ export default {
                                 "Content-Type": "application/x-www-form-urlencoded"
                             }
                         }).then(function(res){
-                            console.log("uuid :"+res.data.uuid);
-                            console.log("action :"+res.data.action);
-                            console.log("law_score :"+res.data.lawScore);
-                            console.log("learning_score :"+res.data.learningScore);
-                            console.log("timeStop :"+res.data.timeStop);
-                            console.log("answer array :"+answerArray);
-                            console.log("timeStamp :"+DateTime);
+                            // console.log("uuid :"+res.data.uuid);
+                            // console.log("action :"+res.data.action);
+                            // console.log("law_score :"+res.data.lawScore);
+                            // console.log("learning_score :"+res.data.learningScore);
+                            // console.log("timeStop :"+res.data.timeStop);
+                            // console.log("answer array :"+answerArray);
+                            // console.log("timeStamp :"+DateTime);
                         }).catch(err => {
                             console.log(err.response);
                         });
@@ -308,16 +466,33 @@ export default {
     }
     li {
         text-align: left;
-        margin: 5%;
+        margin: 3%;
     }
     label {
         margin: 8px;
     }
-    #test_2 {
+    #test_2, #test_10 {
         width: 30%;
         padding: 20px;
     }
+    .test_10 {
+        width: 60%;
+    }
+    #test_4 {
+        width: 40%;
+        padding: 20px;
+    }
+    table, th, td {
+        border: 1px solid lightgray;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 10px;
+    }
     .form {
-        padding-left: 25%;
+        padding-left: 20%;
+    }
+    h2 {
+        text-align: left;
     }
 </style>
