@@ -488,6 +488,7 @@ export default {
     }
     th, td {
         padding: 10px;
+        text-align: center;
     }
     .form {
         padding-left: 20%;

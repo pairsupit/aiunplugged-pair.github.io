@@ -147,8 +147,8 @@ export default {
             AppVue.second = AppVue.second < 10 ? "0" + AppVue.second.toFixed(0) : AppVue.second.toFixed(0);
             document.getElementById("timeRate").innerText = AppVue.minute +"."+AppVue.second;
 
-            document.getElementById("lawRate").innerText = ( (localStorage.sumLawScore/(localStorage.timesTest*3))*100 ).toFixed(2);
-            document.getElementById("learningRate").innerText = ( (localStorage.sumLearningScore/(localStorage.timesTest*2))*100 ).toFixed(2);
+            document.getElementById("lawRate").innerText = ( (localStorage.sumLawScore/(localStorage.timesTest*5))*100 ).toFixed(2);
+            document.getElementById("learningRate").innerText = ( (localStorage.sumLearningScore/(localStorage.timesTest*5))*100 ).toFixed(2);
             document.getElementById("roundRate").innerText = localStorage.timesTest;
             /* แสดงผล law_score, learning_score, MeanTime */     
         },
