@@ -6,40 +6,34 @@
     <form @submit="submitTest">
         <div class="form">
         <ol>
-            <li>คุณมีอายุเท่าไหร่ ?
+            <li>ระดับชั้นปีการศึกษาของคุณ
                 <label for="1.1">
-                    <input type="radio" name="1_ans" id="1.1" value="น้อยกว่า 15 ปี">
-                    <span id="1.1_ans">น้อยกว่า 15 ปี</span>
+                    <input type="radio" name="1_ans" id="1.1" value="นักศึกษาชั้นปีที่ 1">
+                    <span id="1.1_ans">นักศึกษาชั้นปีที่ 1</span>
                 </label>
                 <label for="1.2">
-                    <input type="radio" name="1_ans" id="1.2" value="15-20 ปี">
-                    <span id="1.2_ans">15-20 ปี</span>
+                    <input type="radio" name="1_ans" id="1.2" value="นักศึกษาชั้นปีที่ 2">
+                    <span id="1.2_ans">นักศึกษาชั้นปีที่ 2</span>
                 </label>
                 <label for="1.3">
-                    <input type="radio" name="1_ans" id="1.3" value="20-25 ปี">
-                    <span id="1.3_ans">20-25 ปี</span>
+                    <input type="radio" name="1_ans" id="1.3" value="นักศึกษาชั้นปีที่ 3">
+                    <span id="1.3_ans">นักศึกษาชั้นปีที่ 3</span>
                 </label>
                 <label for="1.4">
-                    <input type="radio" name="1_ans" id="1.4" value="25-30 ปี">
-                    <span id="1.4_ans">25-30 ปี</span>
+                    <input type="radio" name="1_ans" id="1.4" value="นักศึกษาชั้นปีที่ 4">
+                    <span id="1.4_ans">นักศึกษาชั้นปีที่ 4</span>
                 </label>
                 <label for="1.5">
-                    <input type="radio" name="1_ans" id="1.5" value="มากกว่า 30 ปี">
-                    <span id="1.5_ans">มากกว่า 30 ปี</span>
+                    <input type="radio" name="1_ans" id="1.5" value="อื่นๆ">
+                    <span id="1.5_ans">อื่นๆ</span>
                 </label>
             </li>
-            <li>คุณมีอาชีพอะไร ?
+            <li>
                 <label for="2.1">
-                    <input type="radio" name="2_ans" id="2.1" value="นักเรียน/นักศึกษา">
-                    <span id="2.1_ans">นักเรียน/นักศึกษา</span>
-                </label>
-                <label for="2.2">
-                    <input type="radio" name="2_ans" id="2.2" value="ครู/อาจารย์">
-                    <span id="2.2_ans">ครู/อาจารย์</span>
-                </label>
-                <label for="2.3">
-                    <input type="radio" name="2_ans" id="2.3">
-                    อื่นๆ ระบุ <input id="2.3_ans" placeholder="อาชีพ" value="">
+                    คณะ
+                    <input id="2.1" placeholder="คณะ" value="" required>
+                    สาขาวิชา
+                    <input id="2.2" placeholder="สาขาวิชา" value="" required>
                 </label>
             </li>
             <li>คุณมีความรู้เกี่ยวกับ machine learning ในระดับไหน ?
@@ -57,7 +51,7 @@
                 </label>
                 <label for="3.4">
                     <input type="radio" name="3_ans" id="3.4" value="ไม่มีความรู้เรื่อง machine learning เลย">
-                    <span id="3.4_ans">ไม่มีความรู้เรื่อง machine learning เลย</span>
+                    <span id="3.4_ans">ไม่มีความรู้เรื่อง Machine learning และ AI เลย</span>
                 </label>
             </li>
         </ol>
@@ -85,10 +79,12 @@ export default {
     methods: {
         clearPage: function(){
             var inputCheck = document.getElementsByTagName("input");
+            // console.log(inputCheck);
             for( var i = 0 ; i < inputCheck.length ; i++ ){
                 inputCheck[i].checked = false;
             }
-            document.getElementById("2.3_ans").value = "";
+            document.getElementById("2.1").value = "";
+            document.getElementById("2.2").value = "";
         },
         submitTest: function(e){
             e.preventDefault();
@@ -96,24 +92,28 @@ export default {
             var inputCheck = document.getElementsByTagName("input");
             var arrarAnswer = [];
 
-            for(var i=0; i< inputCheck.length; i++){
+            for(var i=0 ; i< document.getElementsByName("1_ans").length ;  i++){
+                if(document.getElementsByName("1_ans")[i].checked == true){
+                    // console.log(document.getElementsByName("1_ans")[i].value);
+                    arrarAnswer.push(document.getElementsByName("1_ans")[i].value);
+                    countToCheck++;
+                }
+            }
+            var faculty = document.getElementById("2.1");
+            var department = document.getElementById("2.2");
+            if(faculty.value != "" && department.value != ""){
+                // console.log(faculty.value + "/ " + department.value);
+                arrarAnswer.push(faculty.value + "/ " + department.value);
+                countToCheck++;
+            }
+            for(var i=0 ; i< document.getElementsByName("3_ans").length ;  i++){
+                if(document.getElementsByName("3_ans")[i].checked == true){
+                    // console.log(document.getElementsByName("3_ans")[i].value);
+                    arrarAnswer.push(document.getElementsByName("3_ans")[i].value);
+                    countToCheck++;
+                }
                 
-                if(inputCheck[i].checked == true){
-
-                    console.log(inputCheck[i].value);
-                    countToCheck++; 
-                    if(inputCheck[i].id == "2.3"){
-                        // document.getElementById("2.3_ans").required = true;
-                        inputCheck[i].value = document.getElementById("2.3_ans").value;
-                        if(document.getElementById("2.3_ans").value == ""){
-                            alert("กรุณากรอกอาชีพของคุณ");
-                            break;
-                        }
-                    }
-                    arrarAnswer.push(inputCheck[i].value);
-                };
-                console.log(arrarAnswer);
-            };
+            }
 
             if( countToCheck == 3 ){
 
