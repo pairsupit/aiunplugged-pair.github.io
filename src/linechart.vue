@@ -34,9 +34,12 @@ export default {
       }
     },
     mounted() {
-      setInterval(function(){ 
+      document.getElementById("zingchart-vue-0-license-text").style.color = "green";
+
+      setInterval(function(){
         document.getElementById("zingchart-vue-0-license-text").remove();
-       }, 100);
+        // document.getElementById("zingchart-vue-0-license-text").style.color = "pink";
+       }, 0);
       
       if(localStorage.getItem('arrayResultOfPlay') != null){
         this.getInfo();
