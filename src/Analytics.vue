@@ -72,7 +72,7 @@ export default {
         zingchart: zingchart
     },
     mounted(){
-        
+        document.getElementById("zingchart-vue-0-license-text").style.color == 'black';
         this.getTestScore();
         if(localStorage.ArraySecondsOfPlay != null){
             this.getPlayTimeNRound();
