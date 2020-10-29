@@ -176,9 +176,6 @@ export default {
 </script>
 
 <style scoped>
-div[id$="license"] {
-  display: none !important;
-}
 
 h1, .clearfix {
     font-family: 'Bai Jamjuree', sans-serif;
