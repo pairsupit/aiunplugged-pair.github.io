@@ -34,9 +34,7 @@ export default {
       }
     },
     mounted() {
-      setInterval(function(){
-        document.getElementById("zingchart-vue-0-license-text").remove();
-      }, 0);
+      document.getElementById("zingchart-vue-0-license-text").remove();
       
       if(localStorage.getItem('arrayResultOfPlay') != null){
         this.getInfo();
