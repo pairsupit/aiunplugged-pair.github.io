@@ -7,11 +7,11 @@
             <!-- Line Chart -->
             <div class="box">
                 <h3>วิเคราะห์การแพ้-ชนะ สำหรับการเล่นในครั้งต่อไปมีอัตรการแพ้สูงขึ้น</h3>
-                <h5 class="y-axis">ผลการแพ้-ชนะสะสมของ<br>Sweet Computer</h5>
+                <h5 class="y-axis">อัตราส่วนการแพ้-ชนะสะสมของ<br>Sweet Computer</h5>
                     <div class="size-line-chart">
                         <zingchart></zingchart>
                     </div>
-                <h5 class="x-axis">รอบที่เล่น</h5>
+                <h5 class="x-axis">รอบที่เล่น(รอบ)</h5>
 
                 <!-- describes -->
                 <!-- <div class="describe" style="text-align:left;">
