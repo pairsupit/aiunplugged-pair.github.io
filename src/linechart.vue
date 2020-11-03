@@ -34,9 +34,9 @@ export default {
       }
     },
     mounted() {
-      setInterval(function(){
-        document.getElementById("zingchart-vue-0-license-text").remove();
-      }, 0);
+      // setInterval(function(){
+      //   document.getElementById("zingchart-vue-0-license-text").remove();
+      // }, 0);
       if(localStorage.getItem('arrayResultOfPlay') != null){
         this.getInfo();
       }
@@ -49,14 +49,19 @@ export default {
 
         var scoreTotal = 0;
         for(var i=1 ; i<array.length ; i++ ){
-          if(array[i] == 'win'){
-            scoreTotal--;
+          if(array[i] == 'win'){ //computer won ,computer didn't learn 
+            // scoreTotal--;
           }else{
             scoreTotal++;
           }
           ArrayTotalResult.push(scoreTotal);
         }
-        console.log(ArrayTotalResult);
+        
+        // for(var i=1 ; i<ArrayTotalResult.length ; i++){
+        //   ArrayTotalResult[i] = (ArrayTotalResult[i]/(ArrayTotalResult.length-1))
+          
+        // }
+        // console.log(ArrayTotalResult);
         this.array = ArrayTotalResult;
       }
     },

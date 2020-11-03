@@ -6,12 +6,13 @@
             
             <!-- Line Chart -->
             <div class="box">
-                <h3>วิเคราะห์การแพ้-ชนะ สำหรับการเล่นในครั้งต่อไปมีอัตรการแพ้สูงขึ้น</h3>
-                <h5 class="y-axis">อัตราส่วนการแพ้-ชนะสะสมของ<br>Sweet Computer</h5>
+                <h3>กราฟวิเคราะห์ระหว่างคะแนนสะสมของคอมพิวเตอร์กับจำนวนรอบที่เล่น</h3>
+                <p>โดยกำหนดให้ เริ่มต้นมีคะแนนสะสมเป็น 0 และเมื่อคอมพิวเตอร์ชนะ คะแนนสะสมจะเพิ่มขึ้น 1 คะแนน</p>
+                <h5 class="y-axis">คะแนนสะสมของ<br>The sweet computer (คะแนน)</h5>
                     <div class="size-line-chart">
                         <zingchart></zingchart>
                     </div>
-                <h5 class="x-axis">รอบที่เล่น(รอบ)</h5>
+                <h5 class="x-axis">รอบที่เล่น (รอบ)</h5>
 
                 <!-- describes -->
                 <!-- <div class="describe" style="text-align:left;">
@@ -95,7 +96,7 @@ export default {
                     labels: ['คะแนนสะสมส่วนกติกาที่ถูกต้อง', 'คะแนนสะสมส่วนกติกาที่ผิด'],
                     datasets: [{
                     label: 'Page A',
-                    data: [ score1, (localStorage.timesTest*3)-score1 ],
+                    data: [ score1, (localStorage.timesTest*5)-score1 ],
                     backgroundColor: ['#018abe', '#d6e8ee']
                    }]
                 },
@@ -113,7 +114,7 @@ export default {
                     labels: ['คะแนนสะสมส่วนการเรียนรู้ที่ถูกต้อง', 'คะแนนสะสมส่วนการเรียนรู้ที่ผิด'],
                     datasets: [{
                     label: 'Page A',
-                    data: [ score2 , (localStorage.timesTest*2)-score2 ],
+                    data: [ score2 , (localStorage.timesTest*5)-score2 ],
                     backgroundColor: ['#018abe', '#d6e8ee']
                    }]
                 },

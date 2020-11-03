@@ -300,16 +300,14 @@ export default {
       }
     },
     countTime: function(){
-      console.log("start timing");
-      this.TimeInstant = new Date();
-      console.log("TimeInstant :"+this.TimeInstant);
+      // console.log("start timing");
+      // this.TimeInstant = new Date();
+      // console.log("TimeInstant :"+this.TimeInstant);
       
-      var watchStop = setInterval(function(){
-          this.timeRun = new Date();
+      // var watchStop = setInterval(function(){
+      //     this.timeRun = new Date();
 
-          // this.timeRun = ((new Date() - d)/1000).toFixed(0);
-          // console.log("this.timerun :"+ this.timeRun);
-      }, 1000);
+      // }, 1000);
     },
     defineLocalStorageVariable: function(){
       /* สร้างตัวแปรที่เก็บถาวร ใน LocalStorage */
@@ -328,8 +326,11 @@ export default {
       if(localStorage.ArraySecondsOfTest == undefined){
         localStorage.ArraySecondsOfTest = [];
       }
-      if(localStorage.ArraySecondsOfTest == undefined){
-        localStorage.ArraySecondsOfTest = [];
+      if(localStorage.ArraySecondsOfPlay == undefined){
+        localStorage.ArraySecondsOfPlay = [];
+      }
+      if(localStorage.arrayResultOfPlay == undefined){
+        localStorage.arrayResultOfPlay = [];
       }
       if(localStorage.sumLawScore == undefined){
         localStorage.sumLawScore = 0;
@@ -347,11 +348,18 @@ export default {
       this.timeForPC = params.get("time");
     }
     this.updateSelection();
-    
-    this.countTime();
+
     this.defineLocalStorageVariable();
+    console.log("start timing");
+      this.TimeInstant = new Date();
+      console.log("TimeInstant :"+this.TimeInstant);
+      
+      var watchStop = setInterval(function(){
+          this.timeRun = new Date();
 
-
+          // this.timeRun = ((new Date() - d)/1000).toFixed(0);
+          // console.log("this.timerun :"+ this.timeRun);
+    }, 1000);
 
     this.winsPC = localStorage.winsPC;
     this.winsPlayer = localStorage.winsPlayer;

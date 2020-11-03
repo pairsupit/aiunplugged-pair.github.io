@@ -6,10 +6,11 @@
     <!-- <form> -->
     <form @submit="submitTest">
         <div class="form">
-            <ol>
-            <h2>วัดผลส่วนกติกา</h2>
-            <li>เมื่อเริ่มเกมส์แล้ว ข้อใดต่อไปนี้ถูกต้อง
 
+            <h2>วัดผลส่วนกติกา</h2>
+            <ol id="ol-law-part">
+            <li>เมื่อเริ่มเกมส์แล้ว ข้อใดต่อไปนี้ถูกต้อง
+                <div class="Random-list">
                 <label for="1.1">
                     <input type="radio" name="1_ans" id="1.1" value="false">
                         <span id="1.1_ans">ในการเดินตาที่สองเป็นของ The sweet computer</span></label>
@@ -25,13 +26,14 @@
                 <label for="1.4">
                     <input type="radio" name="1_ans" id="1.4" value="true">
                         <span id="1.4_ans">ถูกทุกข้อ</span></label>
-
+                </div>
             </li>
 
             <li>จากรูป the sweet computer จะสามารถเดินไปกี่กรณี อะไรบ้าง?
                 <br>
                 <img src="../src/assets/test_3.png" id="test_2">
 
+                <div class="Random-list">
                 <label for="2.1">
                     <input type="radio" name="2_ans" id="2.1" value="false">
                         <span id="2.1_ans">1 กรณี หมายเลข 2 เดินแบบเฉียงกินหมายเลข 3</span></label>
@@ -47,11 +49,12 @@
                 <label for="2.4">
                     <input type="radio" name="2_ans" id="2.4" value="false">
                         <span id="2.4_ans">3 กรณี  หมายเลข 1 เดินแบบตรงกินหมายเลข 3,  หมายเลข 2 เดินแบบเฉียงกินหมายเลข 3 และ หมายเลข 2 เดินไปข้างหน้า</span></label>
-
+                </div>
             </li>
 
             <li>ข้อใดพูดถึงกติกา<u>ผิด</u>
-
+                
+                <div class="Random-list">
                 <label for="3.1">
                     <input type="radio" name="3_ans" id="3.1" value="false">
                         <span id="3.1_ans">เราจะชนะถ้าไปถึงอีกด้านหนึ่งของกระดาน</span></label>
@@ -67,13 +70,14 @@
                 <label for="3.4">
                     <input type="radio" name="3_ans" id="3.4" value="false">
                         <span id="3.4_ans">คุณแพ้เมื่อคุณไม่สามารถเคลื่อนที่ได้อีกต่อไป</span></label>
-
+                </div>
             </li>
 
             <li>ข้อใดต่อไปนี้<u>ผิด</u>
                 <br>
                 <img src="../src/assets/test_4.png" id="test_4">
 
+                <div class="Random-list">
                 <label for="4.1">
                     <input type="radio" name="4_ans" id="4.1" value="true">
                         <span id="4.1_ans">กระดานการเรียนรู้ แสดงทิศทางการเดินของผู้เล่น</span></label>
@@ -90,13 +94,14 @@
                 <label for="4.4">
                     <input type="radio" name="4_ans" id="4.4" value="false">
                         <span id="4.4_ans">สีของลูกศรแต่ละภาพแสดงการเคลื่อนที่ที่เป็นไปได้ของ the sweet computer</span></label>
-
+                </div>
             </li>
             
             <li>ทุกข้อต่อไปนี้อธิบายถึงรูปข้างใต้ <u>ยกเว้น</u>ข้อใด
                 <br>
                 <img src="../src/assets/test_5,9.png" id="test_5">
 
+                <div class="Random-list">
                 <label for="5.1">
                     <input type="radio" name="5_ans" id="5.1" value="false">
                         <span id="5.1_ans">ผู้เล่นมีการเดินเพียง 1 ครั้ง</span></label>
@@ -112,12 +117,15 @@
                 <label for="5.4">
                     <input type="radio" name="5_ans" id="5.4" value="true">
                         <span id="5.4_ans">จุดสี่ลูกแสดงถึงทิศการเดินของผู้เล่น</span></label>
-
+                </div>
             </li>
+            </ol>
 
             <h2>วัดผลการเรียนรู้</h2>
+            <ol id="ol-learning-part">
             <li>เหตุผลในข้อใด ไม่นำไปสู่การเรียนรู้ของ the sweet computer
-
+                
+                <div class="Random-list">
                 <label for="6.1">
                     <input type="radio" name="6_ans" id="6.1" value="false">
                         <span id="6.1_ans">การแพ้ของ the sweet computer</span></label>
@@ -133,11 +141,12 @@
                 <label for="6.4">
                     <input type="radio" name="6_ans" id="6.4" value="true">
                         <span id="6.4_ans">การให้รางวัลเมื่อ the sweet computer ชนะ</span></label>
-
+                </div>
             </li>
 
             <li>ข้อใดต่อไปนี้<u>ผิด</u>
 
+                <div class="Random-list">
                 <label for="7.1">
                     <input type="radio" name="7_ans" id="7.1" value="false">
                         <span id="7.1_ans">ในครั้งแรก The sweet computer มีการเดินแบบสุ่ม</span></label>
@@ -153,11 +162,12 @@
                 <label for="7.4">
                     <input type="radio" name="7_ans" id="7.4" value="true">
                         <span id="7.4_ans">การเรียนรู้ของ the sweet learning computer เกิดจากการให้ลูกอมเป็นรางวัลเมื่อชนะ</span></label>
-
+                </div>
             </li>
 
             <li>คุณคิดว่า ถ้าหากคุณมีการเล่นในแบบเดิมซ้ำๆ คอมพิวเตอร์จะมีโอกาสชนะมากขึ้นหรือไม่ เพราะเหตุใด
-
+                
+                <div class="Random-list">
                 <label for="8.1">
                     <input type="radio" name="8_ans" id="8.1" value="true">
                         <span id="8.1_ans">คอมพิวเตอร์มีโอกาสชนะมากขึ้น เพราะ คอมพิวเตอร์ลบการเคลื่อนที่ที่ทำให้แพ้เรื่อยๆ</span></label>
@@ -173,13 +183,15 @@
                 <label for="8.4">
                     <input type="radio" name="8_ans" id="8.4" value="false">
                         <span id="8.4_ans">คอมพิวเตอร์ไม่มีโอกาสชนะมากขึ้น เพราะ คอมพิวเตอร์จะสุ่มการเคลื่อนที่ใหม่ทุกๆครั้ง </span></label>
+                </div>
 
             </li>
 
             <li>ข้อใดต่อไปนี้กล่าว<b>ผิด</b> เกี่ยวกับจุดในภาพข้างใต้ เมื่อแต่ละสีของจุดหมายถึงสีลูกศรการเคลื่อนที่ที่เป็นไปได้ของ the sweet computer
                 <br>
                 <img src="../src/assets/test_5,9.png" id="test_9">
-
+                
+                <div class="Random-list">
                 <label for="9.1">
                     <input type="radio" name="9_ans" id="9.1" value="false">
                         <span id="9.1_ans">เมื่อผู้เล่นมีการเคลื่อนที่ จะมีการสุ่มจุดในด้านขวามือของภาพ</span></label>
@@ -195,51 +207,28 @@
                 <label for="9.4">
                     <input type="radio" name="9_ans" id="9.4" value="true">
                         <span id="9.4_ans">เมื่อ the sweet computer มีการเคลื่อนแล้วทำให้ชนะจะมีการเดินทางเดิมซ้ำๆ</span></label>
-
+                </div>
             </li>
 
-            <li>ทุกข้อในตารางต่อไปนี้ เป็นกระดานการเคลื่อนที่ในครั้งต่อไปของคอมพิวเตอร์ ดังรูปข้างใต้ <b>ยกเว้น</b>ข้อใด
-                <br>
-                <img src="../src/assets/test_10.png" id="test_10">
-                <table>
-                    <tr>
-                        <td>ข้อ</td>
-                        <td>การเคลื่อนที่ในครั้งต่อไปของคอมพิวเตอร์</td>
-                    </tr>
-                    <tr>
-                        <td>A</td>
-                        <td><img src="../src/assets/10.1.png" class="test_10"></td>
-                    </tr>
-                    <tr>
-                        <td>B</td>
-                        <td><img src="../src/assets/10.2.png" class="test_10"></td>
-                    </tr>
-                    <tr>
-                        <td>C</td>
-                        <td><img src="../src/assets/10.3.png" class="test_10"></td>
-                    </tr>
-                    <tr>
-                        <td>D</td>
-                        <td><img src="../src/assets/10.4.png" class="test_10"></td>
-                    </tr>
-                </table>
+            <li>ทุกข้อต่อไปนี้กล่าวถูกต้อง<b>ยกเว้น</b>ข้อใด
 
+                <div class="Random-list">
                 <label for="10.1">
                     <input type="radio" name="10_ans" id="10.1" value="false">
-                        <span id="10.1_ans">A และ B</span></label>
+                        <span id="10.1_ans">หลังจากคอมพิวเตอร์มีการเรียนรู้แล้ว โอกาสในการชนะจะแม่นยำมาก เพราะเดินตามเส้นทางเดิมที่ชนะ</span></label>
                 
                 <label for="10.2">
                     <input type="radio" name="10_ans" id="10.2" value="false">
-                        <span id="10.2_ans">A และ C</span></label>
+                        <span id="10.2_ans">หลังจากคอมพิวเตอร์มีการเรียนรู้แล้ว จะเพิ่มโอกาสในการชนะด้วยการเดินในทางเดิมที่ชนะ</span></label>
 
                 <label for="10.3">
                     <input type="radio" name="10_ans" id="10.3" value="false">
-                        <span id="10.3_ans">B และ C </span></label>
+                        <span id="10.3_ans">ถึงแม้คอมพิวเตอร์มีการเรียนรู้แล้ว คอมพิวเตอร์จะเดินครั้งต่อไปด้วยการเดินในทิศทางที่สุ่มอีก</span></label>
 
                 <label for="10.4">
                     <input type="radio" name="10_ans" id="10.4" value="true">
-                        <span id="10.4_ans">A, B และ C</span></label>
-
+                        <span id="10.4_ans">คอมพิวเตอร์ที่มีการเรียนรู้แล้ว จะไม่เดินไปในทิศทางเดิมถ้ามีการแพ้ และจะสามารถเดินไปในทิศทางเดิมซ้ำได้ถ้าเส้นทางนั้นทำให้คอมพิวเตอร์ชนะ</span></label>
+                </div>
             </li>
         </ol>
         </div>
@@ -292,6 +281,28 @@ export default {
                 d = new Date();
             }       
         }
+        
+        /* สลับข้อ */
+        var ul = document.getElementById("ol-law-part");
+        for (var i = ul.children.length; i >= 0; i--) {
+            ul.appendChild(ul.children[Math.random() * i | 0]);
+        }
+        
+        var ul = document.getElementById("ol-learning-part");
+        for (var i = ul.children.length; i >= 0; i--) {
+            ul.appendChild(ul.children[Math.random() * i | 0]);
+        }
+        /* สลับข้อ */
+
+        /* สลับตัวเลือก */
+        var div = document.getElementsByClassName("Random-list");
+        for(var j=0 ; j<div.length ; j++){
+            for (var i = div[j].children.length; i >= 0; i--) {
+                div[j].appendChild(div[j].children[Math.random() * i | 0]);
+            }
+        }
+        /* สลับตัวเลือก */
+        
     },
     methods: {
         clearPage: function(){
