@@ -26,7 +26,7 @@
             
             <!-- Score pie-chart -->
             <div class="box">
-                <h3>วิเคราะห์แบบสอบถามตัวชี้วัดหลังการใช้</h3>
+                <h3>วิเคราะห์แบบทดสอบตัวชี้วัด</h3>
                 
                 <div style="padding-top: 100px"> 
                     <div class="clearfix">
