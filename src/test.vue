@@ -259,12 +259,12 @@ export default {
         var inputCheck = document.getElementsByTagName("input");
         var isItFive;
 
+        this.TimeInstant = new Date();
         var watchStop = setInterval(function(){   
 
-                this.timeRun = ((new Date() - d)/1000).toFixed(0);
+                this.timeRun = new Date();
                 // console.log(this.timeRun);
                 var countToCheck = 0;
-
                 for(var i=0; i< inputCheck.length; i++){
                     if(inputCheck[i].checked == true){
                         countToCheck++
@@ -392,9 +392,10 @@ export default {
                 var DateTime = dateFormat+", "+time;
                 /* This is timeStamp */
 
+                var seconds = ((timeRun - this.TimeInstant)/1000).toFixed(0);
                 /* เพิ่มการบันทึกเวลาใน localStorage */
                 var newArray = [];
-                newArray.push(timeRun);
+                newArray.push(seconds);
                 var oldArray = localStorage.getItem('ArraySecondsOfTest');
                 var ArraySecondsOfTest = [];
                 ArraySecondsOfTest.push(oldArray);

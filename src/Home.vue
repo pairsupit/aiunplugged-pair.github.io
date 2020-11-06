@@ -162,7 +162,7 @@ export default {
         
         //ส่งการหยุดนับเวลาไป
         var seconds = ((timeRun - self.TimeInstant)/1000).toFixed(0);
-        console.log("เวลาที่ใช้ตั้งแต่เปิดเพจถึงชนะ(seconds) :"+ seconds);
+        // console.log("เวลาที่ใช้ตั้งแต่เปิดเพจถึงชนะ(seconds) :"+ seconds);
         //ส่งการหยุดนับเวลาไป
 
         /* เพิ่มการบันทึกเวลาใน localStorage */
@@ -177,7 +177,7 @@ export default {
 
         self.playRound++;
         localStorage.times++;
-        console.log("จำนวนรอบการเล่น(playRound) :"+ self.playRound);
+        // console.log("จำนวนรอบการเล่น(playRound) :"+ self.playRound);
 
         /* This is timeStamp */
         var date = new Date();  
@@ -202,8 +202,8 @@ export default {
                     "Content-Type": "application/x-www-form-urlencoded"
                   }
                 }).then(function(res){
-                  console.log("Insert Play round succesfully!");
-                  console.log(res.data);
+                  // console.log("Insert Play round succesfully!");
+                  // console.log(res.data);
                   
                 }).catch(err => {
                   console.log(err.response);
@@ -237,7 +237,7 @@ export default {
         }, this.timeForPC / 2);
         
         // clearInterval(watchStop);
-        console.log("มนุษย์ชนะ");
+        // console.log("มนุษย์ชนะ");
  
       } else {
         
@@ -252,7 +252,7 @@ export default {
           if (move === undefined) {
             
             // clearInterval(watchStop);
-            console.log("มนุษย์ชนะ");
+            // console.log("มนุษย์ชนะ");
 
             this.computerModel.humanWon();
             this.forceUpdate++;
@@ -275,7 +275,7 @@ export default {
               if (self.checkWinner(stateAfterPCMove, self.computer)) {
 
                 // clearInterval(watchStop);
-                console.log("คอมพิวเตอร์ชนะ");
+                // console.log("คอมพิวเตอร์ชนะ");
 
                 self.computerModel.computerWon();
                 self.forceUpdate++;
@@ -298,16 +298,6 @@ export default {
         this.active = this.active == this.player ? this.computer : this.player;
         
       }
-    },
-    countTime: function(){
-      // console.log("start timing");
-      // this.TimeInstant = new Date();
-      // console.log("TimeInstant :"+this.TimeInstant);
-      
-      // var watchStop = setInterval(function(){
-      //     this.timeRun = new Date();
-
-      // }, 1000);
     },
     defineLocalStorageVariable: function(){
       /* สร้างตัวแปรที่เก็บถาวร ใน LocalStorage */
@@ -350,12 +340,12 @@ export default {
     this.updateSelection();
 
     this.defineLocalStorageVariable();
-    console.log("start timing");
-      this.TimeInstant = new Date();
-      console.log("TimeInstant :"+this.TimeInstant);
+    // console.log("start timing");
+    this.TimeInstant = new Date();
+    // console.log("TimeInstant :"+this.TimeInstant);
       
-      var watchStop = setInterval(function(){
-          this.timeRun = new Date();
+    var watchStop = setInterval(function(){
+        this.timeRun = new Date();
 
           // this.timeRun = ((new Date() - d)/1000).toFixed(0);
           // console.log("this.timerun :"+ this.timeRun);
