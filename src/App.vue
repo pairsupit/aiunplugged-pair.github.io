@@ -3,7 +3,7 @@
 
     <ul id="navbar">
       <li><router-link to="/">หน้าหลัก</router-link></li>
-      <li><router-link to="/test">ตัวชี้วัดหลังการใช้</router-link></li>
+      <li><router-link to="/test">แบบทดสอบ</router-link></li>
       <li><router-link to="/analytics">การวิเคราะห์</router-link></li>
       <li><router-link to="/inquirement">แบบสอบถามผู้ใช้</router-link></li>
     </ul>

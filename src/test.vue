@@ -1,7 +1,7 @@
 <template>
 
   <div id="test">
-    <h1><b>ตัวชี้วัดหลังการเล่น</b></h1>
+    <h1><b>แบบทดสอบ</b></h1>
 
     <!-- <form> -->
     <form @submit="submitTest">
