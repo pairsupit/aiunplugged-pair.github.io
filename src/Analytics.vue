@@ -74,7 +74,8 @@ export default {
     },
     mounted(){
         this.getTestScore();
-        if(localStorage.ArraySecondsOfPlay != null){
+        
+        if(localStorage.ArraySecondsOfPlay.length != 0){
             this.getPlayTimeNRound();
         }
     },
