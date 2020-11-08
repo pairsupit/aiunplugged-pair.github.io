@@ -368,9 +368,9 @@ export default {
                     localStorage.sumLearningScore++;
                 };
                
-                alert("คะแนนรวมทั้งหมด : " + this.score
-                        +",\nคะแนนส่วนกติกาการเล่น :" + this.score_1 
-                        +",\nคะแนนส่วนกติกาการเล่น :"+ this.score_2);
+                alert("คะแนนรวมทั้งหมด : " + this.score+"/10"
+                        +",\n- คะแนนส่วนกติกาการเล่น : " + this.score_1+"/5"
+                        +",\n- คะแนนส่วนการเรียนรู้ : "+ this.score_2+"/5");
 
                 
                 var answerArray = [];
@@ -418,7 +418,7 @@ export default {
                             answer9: answerArray[8],
                             answer10: answerArray[9],
                             learningScore: this.score_2,
-                            timeStop: timeRun,
+                            timeStop: seconds,
                             timeStamp: DateTime
                         },{
                             headers: {
