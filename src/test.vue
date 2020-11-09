@@ -48,7 +48,7 @@
 
                 <label for="2.4">
                     <input type="radio" name="2_ans" id="2.4" value="false">
-                        <span id="2.4_ans">3 กรณี  หมายเลข 1 เดินแบบตรงกินหมายเลข 3,  หมายเลข 2 เดินแบบเฉียงกินหมายเลข 3 และ หมายเลข 2 เดินไปข้างหน้า</span></label>
+                        <span id="2.4_ans">3 กรณี  หมายเลข 1 เดินแบบตรงกินหมายเลข 3, หมายเลข 2 เดินแบบเฉียงกินหมายเลข 3 และ หมายเลข 2 เดินไปข้างหน้า</span></label>
                 </div>
             </li>
 
@@ -157,7 +157,7 @@
 
                 <label for="7.3">
                     <input type="radio" name="7_ans" id="7.3" value="false">
-                        <span id="7.3_ans">การแพ้ทำให้ the sweet computer เรียนรู้โดยการเลิกการเคลื่อนที่ตำแหน่งเดิมที่ทำให้แพ้</span></label>
+                        <span id="7.3_ans">การแพ้ทำให้ the sweet computer เรียนรู้โดยการยกเลิกการเคลื่อนที่ตำแหน่งเดิมที่ทำให้แพ้</span></label>
 
                 <label for="7.4">
                     <input type="radio" name="7_ans" id="7.4" value="true">
@@ -339,7 +339,7 @@ export default {
                     this.score++; this.score_1++;
                     localStorage.sumLawScore++;
                 };
-                if(document.getElementById("4.4").checked == true){
+                if(document.getElementById("4.1").checked == true){
                     this.score++; this.score_1++;
                     localStorage.sumLawScore++;
                 };
