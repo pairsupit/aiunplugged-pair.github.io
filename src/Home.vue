@@ -381,8 +381,11 @@ export default {
     grid-template-columns: 40% 60%;
   }
   #main-game {
-    margin-left: 10%;
-    margin-right: 10%;
+    /* margin: auto; */
+    /* width: 80%; */
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
   }
 
   .rulesets {
@@ -420,7 +423,7 @@ export default {
 }
 
 .points > div {
-  width: 75%;
+  width: 100%;
 }
 
 .points-svg-container {

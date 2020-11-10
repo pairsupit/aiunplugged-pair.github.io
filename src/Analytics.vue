@@ -58,7 +58,6 @@ import AppVue from './App.vue';
 import zingchart from "./linechart.vue";
 import Chart from 'chart.js';
 
-
 export default {
     name:"analytics",
     data: function(){
@@ -177,7 +176,6 @@ export default {
 </script>
 
 <style scoped>
-
 h1, .clearfix {
     font-family: 'Bai Jamjuree', sans-serif;
     font-weight: 300;

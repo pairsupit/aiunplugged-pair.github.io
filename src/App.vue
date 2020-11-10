@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-
-    <ul id="navbar">
-      <li><router-link to="/">หน้าหลัก</router-link></li>
-      <li><router-link to="/test">แบบทดสอบ</router-link></li>
-      <li><router-link to="/analytics">การวิเคราะห์</router-link></li>
-      <li><router-link to="/inquirement">แบบสอบถามผู้ใช้</router-link></li>
-    </ul>
+    <div class="topnav" id="myTopnav">
+      <a><router-link to="/">หน้าหลัก</router-link></a>
+      <a><router-link to="/test">แบบทดสอบ</router-link></a>
+      <a><router-link to="/analytics">การวิเคราะห์</router-link></a>
+      <a><router-link to="/inquirement">แบบสอบถามผู้ใช้</router-link></a>
+      <a href="javascript:void(0);" style="font-size:30px;" class="icon" @click="myFunction">&#9776;</a>
+    </div>
 
     <router-view></router-view>
 
@@ -34,41 +34,126 @@ export default {
 
   },
   methods:{
-
+    myFunction() {
+      var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+    }
   }
 
 };
 </script>
 
 <style scope>
-
-ol, li {
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+.topnav {
   font-family: 'Bai Jamjuree', sans-serif;
-  font-weight: 300;
 }
 
-#navbar {
-  list-style-type: none;
-  margin: 0px;
-  padding: 0px;
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  margin-bottom: 20px;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
   overflow: hidden;
 }
 
-#navbar li {
-  display: block;
-  float: right;
-  border: 2px solid orange;
-  border-radius: 10px;
-  padding: 8px;
-  margin: 10px;
-  
-}
-#navbar li a {
-  text-decoration: none;
-  
-}
-#navbar li a:hover {
-  color: orange;
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
 }
 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 800px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
 </style>

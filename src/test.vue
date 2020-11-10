@@ -17,11 +17,11 @@
                 
                 <label for="1.2">
                     <input type="radio" name="1_ans" id="1.2" value="false">
-                        <span id="1.2_ans">เราสามารถเดินทแยงได้ก็ต่อเมื่อมีหมากอยู่เท่านั้น</span></label>
+                        <span id="1.2_ans">เราสามารถเดินทแยงได้ก็ต่อเมื่อมีหมากฝ่ายตรงข้ามอยู่เท่านั้น</span></label>
 
                 <label for="1.3">
                     <input type="radio" name="1_ans" id="1.3" value="false">
-                        <span id="1.3_ans">เราสามารถเดินตรงได้ก็ต่อเมื่อไม่มีหมากอยู่ด้านหน้า</span></label>
+                        <span id="1.3_ans">เราสามารถเดินตรงได้ก็ต่อเมื่อไม่มีหมากใดๆอยู่ด้านหน้า</span></label>
 
                 <label for="1.4">
                     <input type="radio" name="1_ans" id="1.4" value="true">
@@ -65,11 +65,11 @@
 
                 <label for="3.3">
                     <input type="radio" name="3_ans" id="3.3" value="false">
-                        <span id="3.3_ans">เมื่อคู่ต่อสู้กินหมากจนหมด คู่ต่อสู้จะชนะ</span></label>
+                        <span id="3.3_ans">คุณจะชนะ เมื่อกินหมากฝ่ายตรงข้ามจนหมด</span></label>
 
                 <label for="3.4">
                     <input type="radio" name="3_ans" id="3.4" value="false">
-                        <span id="3.4_ans">คุณแพ้เมื่อคุณไม่สามารถเคลื่อนที่ได้อีกต่อไป</span></label>
+                        <span id="3.4_ans">คุณแพ้ เมื่อคุณไม่สามารถเคลื่อนที่ได้อีกต่อไป</span></label>
                 </div>
             </li>
 

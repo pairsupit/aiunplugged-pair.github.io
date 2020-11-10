@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import AppVue from '../App.vue';
 export default {
   name: "Tour",
   props: {
@@ -21,7 +22,7 @@ export default {
       },
       steps: [
         {
-          target: "#main-game>h4", // We're using document.querySelector() under the hood
+          target: ".field",// We're using document.querySelector() under the hood
           content: `คุณเล่นเป็น <strong>หน้ายิ้ม</strong>! คุณจะเป็นฝ่ายชนะ ถ้า
           <ul style="text-align: left;">
           <li>ตัวหมากตัวใดตัวหนึ่งของคุณไปถึงอีกด้านของกระดาน</li>
@@ -29,9 +30,9 @@ export default {
           <li>หรือคุณกินตัวหมากของศัตรูจนหมด</li>
           </ul>`,
           params: {
-            placement: "right"
+            placement: "left"
           }
-        },
+        }, 
         {
           target: "img:first-of-type",
           content: "วิธีการเดินคือ <strong>ให้ลากแล้วปล่อย</strong>"
@@ -41,7 +42,7 @@ export default {
           content:
             "คอมพิวเตอร์จะค้นหารูปแบบการเดินที่หน้าตาเหมือนหน้ากระดานปัจจุบันแล้วสุ่มสีเพื่อเดิน",
           params: {
-            placement: "left"
+            placement: "bottom"
           }
         },
         {
@@ -58,7 +59,9 @@ export default {
     };
   },
   mounted: function() {
-    this.$tours["myTour"].start();
+    if(localStorage.winsPlayer + localStorage.winsPC == 0){
+      this.$tours["myTour"].start();
+    }
   }
 };
 </script>

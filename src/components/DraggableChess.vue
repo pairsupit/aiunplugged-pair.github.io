@@ -170,7 +170,7 @@ export default {
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: 1fr;
   touch-action: none;
-  width: 80%;
+  width: 100%;
 }
 
 .field > div {
